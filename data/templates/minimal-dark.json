@@ -1,0 +1,11 @@
+{
+  "id": "minimal-dark",
+  "name": "极简深色",
+  "description": "深色圆角，极简风格",
+  "styleId": "rounded-dots",
+  "preview": "",
+  "overrides": {
+    "colorDark": "#1e293b",
+    "colorLight": "#f8fafc"
+  }
+}

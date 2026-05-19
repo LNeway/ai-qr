@@ -1,0 +1,23 @@
+{
+  "id": "gradient-modern",
+  "name": "渐变现代",
+  "category": "modern",
+  "parameters": {
+    "dotShape": "rounded",
+    "colorDark": "#1e40af",
+    "colorLight": "#ffffff",
+    "gradient": {
+      "enabled": true,
+      "type": "linear",
+      "colors": ["#3b82f6", "#8b5cf6"]
+    },
+    "cornerSquareType": "extra-rounded",
+    "cornerDotType": "dot",
+    "logo": {
+      "enabled": false,
+      "url": "",
+      "size": 0.2
+    },
+    "errorCorrection": "H"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rounded-dots",
+  "name": "圆角圆点",
+  "category": "modern",
+  "parameters": {
+    "dotShape": "rounded",
+    "colorDark": "#2563eb",
+    "colorLight": "#ffffff",
+    "gradient": {
+      "enabled": false,
+      "type": "linear",
+      "colors": []
+    },
+    "cornerSquareType": "extra-rounded",
+    "cornerDotType": "dot",
+    "logo": {
+      "enabled": false,
+      "url": "",
+      "size": 0.2
+    },
+    "errorCorrection": "M"
+  }
+}
