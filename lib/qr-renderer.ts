@@ -1,4 +1,5 @@
-import type { StyleParameters } from './types'
+import type { StyleParameters, ErrorCorrectionLevel, DotShape, CornerSquareType, CornerDotType } from './types'
+import type { DotType, CornerSquareType as QRCornerSquareType, CornerDotType as QRCornerDotType } from 'qr-code-styling/lib/types'
 
 export interface QROptions {
   width: number
@@ -6,18 +7,18 @@ export interface QROptions {
   data: string
   dotsOptions: {
     color: string
-    type: string
+    type: DotType
     gradient?: {
       type: 'linear' | 'radial'
       rotation: number
       colorStops: { offset: number; color: string }[]
     }
   }
-  cornersSquareOptions: { color: string; type: string }
-  cornersDotOptions: { color: string; type: string }
+  cornersSquareOptions: { color: string; type: QRCornerSquareType }
+  cornersDotOptions: { color: string; type: QRCornerDotType }
   backgroundOptions: { color: string }
   imageOptions?: { crossOrigin: string; margin: number; imageSize: number; image: string }
-  qrOptions: { errorCorrectionLevel: string }
+  qrOptions: { errorCorrectionLevel: ErrorCorrectionLevel }
 }
 
 function buildGradient(params: StyleParameters) {
@@ -41,16 +42,16 @@ export function buildQROptions(params: StyleParameters, size: number): QROptions
     data: '',
     dotsOptions: {
       color: params.colorDark,
-      type: params.dotShape,
+      type: params.dotShape as DotType,
       ...(gradient && { gradient }),
     },
     cornersSquareOptions: {
       color: params.colorDark,
-      type: params.cornerSquareType,
+      type: params.cornerSquareType as QRCornerSquareType,
     },
     cornersDotOptions: {
       color: params.colorDark,
-      type: params.cornerDotType,
+      type: params.cornerDotType as QRCornerDotType,
     },
     backgroundOptions: {
       color: params.colorLight,
