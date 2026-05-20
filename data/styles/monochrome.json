@@ -1,9 +1,9 @@
 {
-  "id": "classic",
-  "name": "Classic",
+  "id": "monochrome",
+  "name": "Monochrome",
   "parameters": {
-    "dotShape": "square",
-    "colorDark": "#1f2937",
+    "dotShape": "circle",
+    "colorDark": "#000000",
     "colorLight": "#ffffff",
     "gradient": {
       "enabled": false,
