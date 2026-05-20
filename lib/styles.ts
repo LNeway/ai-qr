@@ -46,17 +46,17 @@ export async function loadTemplate(id: string): Promise<Template> {
   }
 }
 
-function deepMerge<T extends Record<string, unknown>>(target: T, overrides: Partial<T>): T {
-  const result = { ...target }
-  for (const key of Object.keys(overrides) as (keyof T)[]) {
-    const val = overrides[key]
+function deepMerge<T>(target: T, overrides: Partial<T>): T {
+  const result = { ...target } as Record<string, unknown>
+  for (const key of Object.keys(overrides as Record<string, unknown>)) {
+    const val = (overrides as Record<string, unknown>)[key]
     if (val !== undefined && typeof val === 'object' && !Array.isArray(val) && typeof result[key] === 'object' && !Array.isArray(result[key])) {
-      result[key] = deepMerge(result[key] as Record<string, unknown>, val as Record<string, unknown>) as T[keyof T]
+      result[key] = deepMerge(result[key], val)
     } else if (val !== undefined) {
-      result[key] = val as T[keyof T]
+      result[key] = val
     }
   }
-  return result
+  return result as T
 }
 
 export async function resolveTemplate(templateId: string): Promise<StyleParameters> {

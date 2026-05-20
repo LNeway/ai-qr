@@ -1,13 +1,23 @@
 {
   "id": "classic",
-  "name": "Classic",
+  "name": "经典黑白",
+  "category": "basic",
   "parameters": {
     "dotShape": "square",
-    "colorDark": "#1f2937",
+    "colorDark": "#000000",
     "colorLight": "#ffffff",
     "gradient": {
       "enabled": false,
+      "type": "linear",
       "colors": []
-    }
+    },
+    "cornerSquareType": "square",
+    "cornerDotType": "square",
+    "logo": {
+      "enabled": false,
+      "url": "",
+      "size": 0.2
+    },
+    "errorCorrection": "M"
   }
 }

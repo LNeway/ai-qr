@@ -56,4 +56,16 @@ describe('formatQRContent', () => {
   it('throws on unknown content type', () => {
     expect(() => formatQRContent('unknown' as any, '')).toThrow('Unknown content type')
   })
+
+  it('throws on invalid SMS JSON', () => {
+    expect(() => formatQRContent('sms', 'invalid json')).toThrow('Invalid SMS data: must be valid JSON with phone and message fields')
+  })
+
+  it('throws on invalid WiFi JSON', () => {
+    expect(() => formatQRContent('wifi', 'invalid json')).toThrow('Invalid WiFi data: must be valid JSON with ssid, password, and encryption fields')
+  })
+
+  it('throws on invalid vCard JSON', () => {
+    expect(() => formatQRContent('vcard', 'invalid json')).toThrow('Invalid vCard data: must be valid JSON with firstName, lastName, phone, email, and org fields')
+  })
 })

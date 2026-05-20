@@ -1,9 +1,0 @@
-{
-  "id": "classic-dark",
-  "name": "Classic Dark",
-  "styleId": "classic",
-  "overrides": {
-    "colorDark": "#0f172a",
-    "colorLight": "#f1f5f9"
-  }
-}
