@@ -49,7 +49,7 @@ export function FileUpload({ label, accept, maxSizeKB, onFile }: FileUploadProps
         type="file"
         accept={accept}
         onChange={handleFile}
-        className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+        className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-gray-50 file:text-gray-700 hover:file:bg-gray-100"
       />
       {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>

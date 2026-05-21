@@ -1,15 +1,15 @@
 {
   "id": "tech-gradient",
-  "name": "科技渐变",
-  "description": "蓝紫渐变，适合科技品牌",
+  "name": "简约渐变",
+  "description": "灰度渐变，干净利落",
   "styleId": "gradient-modern",
   "preview": "",
   "overrides": {
     "gradient": {
       "enabled": true,
       "type": "linear",
-      "colors": ["#06b6d4", "#3b82f6"]
+      "colors": ["#737373", "#404040"]
     },
-    "colorDark": "#0284c7"
+    "colorDark": "#404040"
   }
 }

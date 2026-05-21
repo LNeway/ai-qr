@@ -42,12 +42,12 @@ export function QRPreview({ data, params }: QRPreviewProps) {
     <div className="flex flex-col items-center gap-4">
       <div
         ref={containerRef}
-        className={`w-[280px] h-[280px] flex items-center justify-center rounded-xl bg-white ${
-          !hasData ? 'border-2 border-dashed border-slate-300' : ''
+        className={`w-[280px] h-[280px] flex items-center justify-center ${
+          !hasData ? 'border-2 border-dashed border-gray-200 rounded-lg' : ''
         }`}
       >
         {!hasData && (
-          <div className="text-center text-slate-400">
+          <div className="text-center text-gray-300">
             <svg className="w-12 h-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2.48a2.5 2.5 0 00-4.52-3m10.04-5a2.5 2.5 0 00-3.52-3M8.48 20H6.5" />
             </svg>

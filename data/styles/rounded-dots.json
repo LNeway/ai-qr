@@ -1,10 +1,10 @@
 {
   "id": "rounded-dots",
-  "name": "圆角圆点",
-  "category": "modern",
+  "name": "简约圆点",
+  "category": "minimal",
   "parameters": {
     "dotShape": "rounded",
-    "colorDark": "#2563eb",
+    "colorDark": "#404040",
     "colorLight": "#ffffff",
     "gradient": {
       "enabled": false,

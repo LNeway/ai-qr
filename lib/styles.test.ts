@@ -46,8 +46,8 @@ describe('loadTemplate', () => {
 describe('resolveTemplate', () => {
   it('merges template overrides onto base style parameters', async () => {
     const params = await resolveTemplate('tech-gradient')
-    expect(params.colorDark).toBe('#0284c7')
-    expect(params.gradient.colors).toEqual(['#06b6d4', '#3b82f6'])
+    expect(params.colorDark).toBe('#404040')
+    expect(params.gradient.colors).toEqual(['#737373', '#404040'])
     expect(params.dotShape).toBe('rounded') // inherited from base style
   })
 })

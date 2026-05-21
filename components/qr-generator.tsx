@@ -10,7 +10,7 @@ const DEFAULT_PARAMS: StyleParameters = {
   dotShape: 'square',
   colorDark: '#000000',
   colorLight: '#ffffff',
-  gradient: { enabled: false, type: 'linear', colors: ['#3b82f6', '#8b5cf6'] },
+  gradient: { enabled: false, type: 'linear', colors: ['#404040', '#a3a3a3'] },
   cornerSquareType: 'square',
   cornerDotType: 'square',
   logo: { enabled: false, url: '', size: 0.2 },
@@ -71,16 +71,16 @@ export function QRGenerator() {
   const qrData = content ? content.data : null
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 min-h-0">
+    <div className="flex flex-col lg:flex-row gap-8 min-h-0">
       {/* Left panel: input + styles */}
-      <div className="w-full lg:w-[400px] lg:flex-shrink-0 space-y-4 overflow-y-auto max-h-[calc(100vh-120px)] pr-2">
+      <div className="w-full lg:w-[380px] lg:flex-shrink-0 space-y-6 overflow-y-auto max-h-[calc(100vh-100px)]">
         <section>
-          <h2 className="text-lg font-semibold text-slate-800 mb-3">内容</h2>
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">内容</h2>
           <ContentInput onContent={handleContent} />
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold text-slate-800 mb-3">样式</h2>
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">样式</h2>
           {error && (
             <p className="text-sm text-amber-600 mb-2 bg-amber-50 rounded-lg p-2">{error}</p>
           )}
@@ -95,8 +95,8 @@ export function QRGenerator() {
       </div>
 
       {/* Right panel: preview (sticky on desktop) */}
-      <div className="flex-1 flex flex-col items-center justify-start pt-4">
-        <div className="lg:sticky lg:top-6">
+      <div className="flex-1 flex flex-col items-center justify-start pt-12">
+        <div className="lg:sticky lg:top-8">
           <QRPreview data={qrData} params={params} />
         </div>
       </div>

@@ -20,7 +20,7 @@ export function ColorPicker({ label, value, onChange }: ColorPickerProps) {
         type="text"
         value={value}
         onChange={e => onChange(e.target.value)}
-        className="w-24 h-8 rounded border border-slate-300 px-2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-24 h-8 rounded border border-gray-300 px-2 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-gray-400"
       />
     </div>
   )

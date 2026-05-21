@@ -20,7 +20,7 @@ export function Slider({ label, value, min, max, step, onChange }: SliderProps) 
         step={step}
         value={value}
         onChange={e => onChange(Number(e.target.value))}
-        className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gray-800"
       />
     </div>
   )

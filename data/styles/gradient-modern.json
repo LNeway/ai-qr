@@ -1,15 +1,15 @@
 {
   "id": "gradient-modern",
-  "name": "渐变现代",
-  "category": "modern",
+  "name": "灰度渐变",
+  "category": "minimal",
   "parameters": {
     "dotShape": "rounded",
-    "colorDark": "#1e40af",
+    "colorDark": "#404040",
     "colorLight": "#ffffff",
     "gradient": {
       "enabled": true,
       "type": "linear",
-      "colors": ["#3b82f6", "#8b5cf6"]
+      "colors": ["#525252", "#a3a3a3"]
     },
     "cornerSquareType": "extra-rounded",
     "cornerDotType": "dot",
