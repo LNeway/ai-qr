@@ -62,10 +62,10 @@ export function StylePanel({ styles, templates, params, onParamsChange, onTempla
             <button
               key={t.id}
               onClick={() => onTemplateSelect(t)}
-              className="text-left p-2 rounded-lg border border-slate-200 hover:border-gray-400 hover:bg-gray-50 transition-colors text-sm"
+              className="text-left p-2 rounded-lg border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
             >
-              <div className="font-medium text-slate-800 truncate">{t.name}</div>
-              <div className="text-xs text-slate-500 truncate">{t.description}</div>
+              <div className="font-medium text-gray-800 truncate">{t.name}</div>
+              <div className="text-xs text-gray-500 truncate">{t.description}</div>
             </button>
           ))}
         </div>
@@ -135,14 +135,14 @@ export function StylePanel({ styles, templates, params, onParamsChange, onTempla
             <div className="flex gap-1">
               <button
                 onClick={() => update({ gradient: { ...params.gradient, colors: [...params.gradient.colors, '#000000'] } })}
-                className="flex-1 h-8 text-xs rounded border border-slate-300 hover:bg-slate-50"
+                className="flex-1 h-8 text-xs rounded border border-gray-300 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
               >
                 + 添加色标
               </button>
               {params.gradient.colors.length > 2 && (
                 <button
                   onClick={() => update({ gradient: { ...params.gradient, colors: params.gradient.colors.slice(0, -1) } })}
-                  className="flex-1 h-8 text-xs rounded border border-slate-300 hover:bg-slate-50 text-red-500"
+                  className="flex-1 h-8 text-xs rounded border border-gray-300 hover:bg-gray-50 text-red-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
                 >
                   - 移除色标
                 </button>
@@ -192,7 +192,7 @@ export function StylePanel({ styles, templates, params, onParamsChange, onTempla
           onChange={v => update({ errorCorrection: v as ErrorCorrectionLevel })}
           options={ECC_OPTIONS}
         />
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-gray-500">
           高纠错可容纳更大的 Logo，但会增加码的密度
         </p>
       </Accordion>

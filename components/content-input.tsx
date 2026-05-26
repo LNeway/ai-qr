@@ -52,24 +52,24 @@ export function ContentInput({ onContent }: ContentInputProps) {
             placeholder="https://example.com"
             value={fields.url || ''}
             onChange={e => updateField('url', e.target.value)}
-            className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
         )
       case 'text':
         return (
           <textarea
-            placeholder="输入文本内容..."
+            placeholder="输入文本内容…"
             value={fields.text || ''}
             onChange={e => updateField('text', e.target.value)}
             rows={3}
-            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
           />
         )
       case 'wifi':
         return (
           <div className="space-y-2">
-            <input placeholder="网络名 (SSID)" value={fields.ssid || ''} onChange={e => updateField('ssid', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
-            <input placeholder="密码" value={fields.password || ''} onChange={e => updateField('password', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="网络名 (SSID)" value={fields.ssid || ''} onChange={e => updateField('ssid', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="密码" value={fields.password || ''} onChange={e => updateField('password', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
             <Select
               value={fields.encryption || 'WPA'}
               onChange={v => updateField('encryption', v)}
@@ -82,7 +82,7 @@ export function ContentInput({ onContent }: ContentInputProps) {
           <input
             type="email" placeholder="user@example.com"
             value={fields.email || ''} onChange={e => updateField('email', e.target.value)}
-            className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
         )
       case 'phone':
@@ -90,24 +90,24 @@ export function ContentInput({ onContent }: ContentInputProps) {
           <input
             type="tel" placeholder="+8613800138000"
             value={fields.phone || ''} onChange={e => updateField('phone', e.target.value)}
-            className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
         )
       case 'sms':
         return (
           <div className="space-y-2">
-            <input placeholder="电话号码" value={fields.phone || ''} onChange={e => updateField('phone', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
-            <textarea placeholder="消息内容" value={fields.message || ''} onChange={e => updateField('message', e.target.value)} rows={2} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none" />
+            <input placeholder="电话号码" value={fields.phone || ''} onChange={e => updateField('phone', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <textarea placeholder="消息内容" value={fields.message || ''} onChange={e => updateField('message', e.target.value)} rows={2} className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none" />
           </div>
         )
       case 'vcard':
         return (
           <div className="space-y-2">
-            <input placeholder="姓" value={fields.lastName || ''} onChange={e => updateField('lastName', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
-            <input placeholder="名" value={fields.firstName || ''} onChange={e => updateField('firstName', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
-            <input placeholder="电话" value={fields.phone || ''} onChange={e => updateField('phone', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
-            <input placeholder="邮箱" value={fields.email || ''} onChange={e => updateField('email', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
-            <input placeholder="公司" value={fields.org || ''} onChange={e => updateField('org', e.target.value)} className="w-full h-10 rounded-lg border border-slate-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="姓" value={fields.lastName || ''} onChange={e => updateField('lastName', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="名" value={fields.firstName || ''} onChange={e => updateField('firstName', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="电话" value={fields.phone || ''} onChange={e => updateField('phone', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="邮箱" value={fields.email || ''} onChange={e => updateField('email', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
+            <input placeholder="公司" value={fields.org || ''} onChange={e => updateField('org', e.target.value)} className="w-full h-10 rounded-lg border border-gray-300 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400" />
           </div>
         )
     }
