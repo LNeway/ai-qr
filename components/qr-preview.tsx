@@ -40,18 +40,16 @@ export function QRPreview({ data, params }: QRPreviewProps) {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div
-        ref={containerRef}
-        className={`w-[280px] h-[280px] flex items-center justify-center ${
-          !hasData ? 'border-2 border-dashed border-gray-200 rounded-lg' : ''
-        }`}
-      >
+      <div className="relative w-[280px] h-[280px]">
+        <div ref={containerRef} className="w-full h-full" />
         {!hasData && (
-          <div className="text-center text-gray-300">
-            <svg className="w-12 h-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2.48a2.5 2.5 0 00-4.52-3m10.04-5a2.5 2.5 0 00-3.52-3M8.48 20H6.5" />
-            </svg>
-            <p className="text-sm">输入内容后自动生成</p>
+          <div className="absolute inset-0 flex items-center justify-center border-2 border-dashed border-gray-200 rounded-lg bg-white">
+            <div className="text-center text-gray-300">
+              <svg className="w-12 h-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2.48a2.5 2.5 0 00-4.52-3m10.04-5a2.5 2.5 0 00-3.52-3M8.48 20H6.5" />
+              </svg>
+              <p className="text-sm">输入内容后自动生成</p>
+            </div>
           </div>
         )}
       </div>
