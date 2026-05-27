@@ -44,12 +44,12 @@ export function FileUpload({ label, accept, maxSizeKB, onFile }: FileUploadProps
 
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
+      <label className="block text-sm font-medium text-purple-700 mb-1">{label}</label>
       <input
         type="file"
         accept={accept}
         onChange={handleFile}
-        className="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-normal file:bg-gray-50 file:text-gray-600 hover:file:bg-gray-100"
+        className="block w-full text-sm text-purple-300 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-medium file:bg-purple-100 file:text-purple-700 hover:file:bg-purple-200"
       />
       {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
