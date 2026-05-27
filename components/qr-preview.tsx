@@ -48,7 +48,7 @@ export function QRPreview({ data, params }: QRPreviewProps) {
               <svg className="w-12 h-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v1m6 11h2m-6 0h-2.48a2.5 2.5 0 00-4.52-3m10.04-5a2.5 2.5 0 00-3.52-3M8.48 20H6.5" />
               </svg>
-              <p className="text-sm text-gray-400">输入内容后自动生成</p>
+              <p className="text-sm text-gray-500">输入内容后自动生成</p>
             </div>
           </div>
         )}

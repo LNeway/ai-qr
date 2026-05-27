@@ -11,12 +11,12 @@ export function Select({ label, value, onChange, options }: SelectProps) {
   const id = useId()
   return (
     <div>
-      {label && <label htmlFor={id} className="block text-sm font-normal text-gray-500 mb-1">{label}</label>}
+      {label && <label htmlFor={id} className="block text-sm font-normal text-gray-600 mb-1">{label}</label>}
       <select
         id={id}
         value={value}
         onChange={e => onChange(e.target.value)}
-        className="w-full h-10 rounded-md border border-gray-200 bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400"
+        className="w-full h-10 rounded-md border border-gray-300 bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400"
       >
         {options.map(o => (
           <option key={o.value} value={o.value}>{o.label}</option>

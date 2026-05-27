@@ -14,7 +14,7 @@ export function Accordion({ title, defaultOpen = false, children }: AccordionPro
     <div>
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-2 text-sm font-normal text-gray-500 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:rounded"
+        className="w-full flex items-center justify-between py-2 text-sm font-normal text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:rounded"
       >
         {title}
         <svg

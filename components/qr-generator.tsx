@@ -75,12 +75,12 @@ export function QRGenerator() {
       {/* Left panel: input + styles */}
       <div className="w-full lg:w-[360px] lg:flex-shrink-0 space-y-5 overflow-y-auto max-h-[calc(100vh-100px)]">
         <section>
-          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">内容</h2>
+          <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">内容</h2>
           <ContentInput onContent={handleContent} />
         </section>
 
         <section>
-          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">样式</h2>
+          <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">样式</h2>
           {error && (
             <p className="text-sm text-amber-600 mb-2 bg-amber-50 rounded-lg p-2">{error}</p>
           )}
