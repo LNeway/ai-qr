@@ -71,9 +71,9 @@ export function QRGenerator() {
   const qrData = content ? content.data : null
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 min-h-0">
+    <div className="flex flex-col lg:flex-row gap-6 min-h-0">
       {/* Left panel: input + styles */}
-      <div className="w-full lg:w-[380px] lg:flex-shrink-0 space-y-6 overflow-y-auto max-h-[calc(100vh-100px)]">
+      <div className="w-full lg:w-[360px] lg:flex-shrink-0 space-y-5 overflow-y-auto max-h-[calc(100vh-100px)]">
         <section>
           <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">内容</h2>
           <ContentInput onContent={handleContent} />
