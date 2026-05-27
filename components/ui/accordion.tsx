@@ -11,10 +11,10 @@ interface AccordionProps {
 export function Accordion({ title, defaultOpen = false, children }: AccordionProps) {
   const [open, setOpen] = useState(defaultOpen)
   return (
-    <div>
+    <div className="border-b border-gray-100 last:border-b-0">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-2 text-sm font-normal text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:rounded"
+        className="w-full flex items-center justify-between py-2.5 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:rounded"
       >
         {title}
         <svg
@@ -27,7 +27,7 @@ export function Accordion({ title, defaultOpen = false, children }: AccordionPro
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      {open && <div className="pb-2 pt-1 space-y-2">{children}</div>}
+      {open && <div className="pb-3 space-y-2.5">{children}</div>}
     </div>
   )
 }

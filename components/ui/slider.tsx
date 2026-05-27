@@ -10,7 +10,7 @@ interface SliderProps {
 export function Slider({ label, value, min, max, step, onChange }: SliderProps) {
   return (
     <div>
-      <label className="block text-sm font-normal text-gray-600 mb-1">
+      <label className="block text-sm font-medium text-gray-700 mb-1">
         {label}: {value}
       </label>
       <input

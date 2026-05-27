@@ -11,7 +11,7 @@ export function Select({ label, value, onChange, options }: SelectProps) {
   const id = useId()
   return (
     <div>
-      {label && <label htmlFor={id} className="block text-sm font-normal text-gray-600 mb-1">{label}</label>}
+      {label && <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">{label}</label>}
       <select
         id={id}
         value={value}

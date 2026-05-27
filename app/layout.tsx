@@ -10,9 +10,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN">
       <head>
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#f9fafb" />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased bg-gray-50 text-gray-900">{children}</body>
     </html>
   )
 }

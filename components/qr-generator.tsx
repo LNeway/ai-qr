@@ -73,16 +73,16 @@ export function QRGenerator() {
   return (
     <div className="flex flex-col lg:flex-row gap-6 min-h-0">
       {/* Left panel: input + styles */}
-      <div className="w-full lg:w-[360px] lg:flex-shrink-0 space-y-5 overflow-y-auto max-h-[calc(100vh-100px)]">
-        <section>
-          <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">内容</h2>
+      <div className="w-full lg:w-[360px] lg:flex-shrink-0 space-y-4 overflow-y-auto max-h-[calc(100vh-120px)]">
+        <section className="bg-white rounded-xl border border-gray-200 p-4">
+          <h2 className="text-sm font-semibold text-gray-700 mb-3">内容</h2>
           <ContentInput onContent={handleContent} />
         </section>
 
-        <section>
-          <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-3">样式</h2>
+        <section className="bg-white rounded-xl border border-gray-200 p-4">
+          <h2 className="text-sm font-semibold text-gray-700 mb-3">样式</h2>
           {error && (
-            <p className="text-sm text-amber-600 mb-2 bg-amber-50 rounded-lg p-2">{error}</p>
+            <p className="text-sm text-amber-600 mb-3 bg-amber-50 rounded-lg p-2">{error}</p>
           )}
           <StylePanel
             styles={styles}
@@ -95,7 +95,7 @@ export function QRGenerator() {
       </div>
 
       {/* Right panel: preview (sticky on desktop) */}
-      <div className="flex-1 flex flex-col items-center justify-start pt-12">
+      <div className="flex-1 flex flex-col items-center justify-center">
         <div className="lg:sticky lg:top-8">
           <QRPreview data={qrData} params={params} />
         </div>
