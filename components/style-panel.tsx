@@ -62,7 +62,7 @@ export function StylePanel({ styles, templates, params, onParamsChange, onTempla
             <button
               key={t.id}
               onClick={() => onTemplateSelect(t)}
-              className="text-left p-2 rounded-lg border border-purple-200 hover:border-purple-400 hover:bg-purple-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
+              className="text-left p-3 rounded-lg border border-purple-200 hover:border-purple-400 hover:bg-purple-50 hover:shadow-sm transition-all duration-200 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
             >
               <div className="font-normal text-purple-700 truncate">{t.name}</div>
               <div className="text-xs text-purple-300 truncate">{t.description}</div>
@@ -135,14 +135,14 @@ export function StylePanel({ styles, templates, params, onParamsChange, onTempla
             <div className="flex gap-1">
               <button
                 onClick={() => update({ gradient: { ...params.gradient, colors: [...params.gradient.colors, '#000000'] } })}
-                className="flex-1 h-8 text-xs rounded border border-purple-200 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
+                className="flex-1 h-8 text-xs rounded border border-purple-200 hover:bg-purple-50 hover:border-purple-300 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
               >
                 + 添加色标
               </button>
               {params.gradient.colors.length > 2 && (
                 <button
                   onClick={() => update({ gradient: { ...params.gradient, colors: params.gradient.colors.slice(0, -1) } })}
-                  className="flex-1 h-8 text-xs rounded border border-purple-200 hover:bg-purple-50 text-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
+                  className="flex-1 h-8 text-xs rounded border border-purple-200 hover:bg-purple-50 hover:border-purple-300 text-red-400 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
                 >
                   - 移除色标
                 </button>

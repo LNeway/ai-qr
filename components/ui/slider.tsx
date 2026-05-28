@@ -10,8 +10,8 @@ interface SliderProps {
 export function Slider({ label, value, min, max, step, onChange }: SliderProps) {
   return (
     <div>
-      <label className="block text-sm font-medium text-purple-700 mb-1">
-        {label}: {value}
+      <label className="block text-sm font-semibold text-purple-800 mb-2">
+        {label}: <span className="text-purple-600">{value}</span>
       </label>
       <input
         type="range"
@@ -20,7 +20,7 @@ export function Slider({ label, value, min, max, step, onChange }: SliderProps) 
         step={step}
         value={value}
         onChange={e => onChange(Number(e.target.value))}
-        className="w-full h-1.5 bg-purple-100 rounded-full appearance-none cursor-pointer accent-purple-500"
+        className="w-full h-2 bg-purple-100 rounded-full appearance-none cursor-pointer accent-purple-500 hover:accent-purple-600 transition-all"
       />
     </div>
   )

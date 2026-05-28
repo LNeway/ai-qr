@@ -44,7 +44,7 @@ export function FileUpload({ label, accept, maxSizeKB, onFile }: FileUploadProps
 
   return (
     <div>
-      <label className="block text-sm font-medium text-purple-700 mb-1">{label}</label>
+      <label className="block text-sm font-semibold text-purple-800 mb-1.5">{label}</label>
       <input
         type="file"
         accept={accept}

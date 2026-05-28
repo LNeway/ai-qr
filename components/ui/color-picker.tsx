@@ -10,7 +10,7 @@ export function ColorPicker({ label, value, onChange }: ColorPickerProps) {
   const id = useId()
   return (
     <div className="flex items-center gap-2">
-      <label htmlFor={id} className="text-sm font-medium text-purple-700">{label}</label>
+      <label htmlFor={id} className="text-sm font-semibold text-purple-800">{label}</label>
       <input
         id={id}
         type="color"

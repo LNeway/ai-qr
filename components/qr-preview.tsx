@@ -40,7 +40,7 @@ export function QRPreview({ data, params }: QRPreviewProps) {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="bg-white rounded-xl border border-purple-100 p-6">
+      <div className="bg-white rounded-xl border border-purple-100 p-8 shadow-sm">
         <div className="relative w-[280px] h-[280px]">
           <div ref={containerRef} className="w-full h-full" />
           {!hasData && (
